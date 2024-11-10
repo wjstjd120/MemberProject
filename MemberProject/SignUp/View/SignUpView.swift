@@ -17,7 +17,7 @@ class SignUpView: UIView {
         return stackView
     }()
     
-    private let idTextField: UITextField = {
+    let idTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "아이디"
         textField.borderStyle = .roundedRect
@@ -25,7 +25,7 @@ class SignUpView: UIView {
         return textField
     }()
     
-    private let passwordTextField: UITextField = {
+    let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "비밀번호"
         textField.borderStyle = .roundedRect
@@ -33,19 +33,26 @@ class SignUpView: UIView {
         return textField
     }()
     
-    let loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("로그인", for: .normal)
-        button.backgroundColor = .systemGreen
-        button.layer.masksToBounds = false
-        button.layer.cornerRadius = 5
-        return button
+    let nickNameTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "닉네임"
+        textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
+        return textField
     }()
     
-    let sginUpButton: UIButton = {
+    let nameTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "이름"
+        textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
+        return textField
+    }()
+    
+    let signUpButton: UIButton = {
         let button = UIButton()
         button.setTitle("회원가입", for: .normal)
-        button.backgroundColor = .systemGray4
+        button.backgroundColor = .systemGreen
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 5
         return button
@@ -67,8 +74,9 @@ class SignUpView: UIView {
         [
          idTextField,
          passwordTextField,
-         loginButton,
-         sginUpButton
+         nickNameTextField,
+         nameTextField,
+         signUpButton
         ].forEach {
             verticalStackView.addArrangedSubview($0)
         }
@@ -81,7 +89,7 @@ class SignUpView: UIView {
         
         verticalStackView.snp.makeConstraints {
             $0.width.equalTo(200)
-            $0.height.equalTo(200)
+            $0.height.equalTo(250)
             $0.center.equalToSuperview()
         }
     }
