@@ -35,6 +35,7 @@ class MainViewController: UIViewController {
     private func memberCheck() {
         guard let id = UserDefaults.standard.string(forKey: "loginMemberId") else {
             buttonUISet(stateMent: false)
+            mainView.titleLabel.text = "로그인 해주세요."
             return
         }
         
@@ -88,6 +89,7 @@ class MainViewController: UIViewController {
     
     @objc
     func logout() {
+        showAlert(message: "로그아웃 되었습니다.")
         UserDefaults.standard.removeObject(forKey: "loginMemberId")
         memberCheck()
     }
@@ -102,7 +104,7 @@ class MainViewController: UIViewController {
         let dataManager = MemberCoreDataManager()
         
         dataManager.deleteMember(id: id)
-        
+        showAlert(message: "회원탈퇴가 완료되었습니다.")
         UserDefaults.standard.removeObject(forKey: "loginMemberId")
         memberCheck()
     }
