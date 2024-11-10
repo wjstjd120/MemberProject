@@ -50,7 +50,18 @@ class MemberCoreDataManager {
             print("삭제 실패")
         }
     }
-
+    
+//    func loginMember(id: String, password: String) -> Member? {
+//        do {
+//            let request = Member.fetchRequest()
+//            request.predicate = NSPredicate(format: "id == %@ AND password == %@", id, password)
+//            let member = try context.fetch(request).first
+//            
+//            return member
+//        } catch {
+//            return nil
+//        }
+//    }
 }
 
 struct MemberModel {
