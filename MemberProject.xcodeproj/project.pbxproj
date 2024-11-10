@@ -17,6 +17,9 @@
 		74A77EF62CE09AD100F4C681 /* Member+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77EF42CE09AD100F4C681 /* Member+CoreDataProperties.swift */; };
 		74A77EF82CE09C4F00F4C681 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77EF72CE09C4F00F4C681 /* LoginView.swift */; };
 		74A77EFB2CE0A52100F4C681 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 74A77EFA2CE0A52100F4C681 /* SnapKit */; };
+		74A77F012CE0B56400F4C681 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77F002CE0B4DF00F4C681 /* MainViewController.swift */; };
+		74A77F022CE0B56400F4C681 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77EFE2CE0B4DF00F4C681 /* MainView.swift */; };
+		74A77F042CE0BC5700F4C681 /* MemberCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77F032CE0BC5700F4C681 /* MemberCoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		74A77EF32CE09AD100F4C681 /* Member+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+CoreDataClass.swift"; sourceTree = "<group>"; };
 		74A77EF42CE09AD100F4C681 /* Member+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74A77EF72CE09C4F00F4C681 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		74A77EFE2CE0B4DF00F4C681 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		74A77F002CE0B4DF00F4C681 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		74A77F032CE0BC5700F4C681 /* MemberCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		74A77ED72CE089BF00F4C681 /* MemberProject */ = {
 			isa = PBXGroup;
 			children = (
+				74A77EFC2CE0B4CB00F4C681 /* Main */,
 				74A77ED82CE089BF00F4C681 /* AppDelegate.swift */,
 				74A77EDA2CE089BF00F4C681 /* SceneDelegate.swift */,
 				74A77EF02CE0998E00F4C681 /* Login */,
@@ -106,8 +113,34 @@
 			children = (
 				74A77EF32CE09AD100F4C681 /* Member+CoreDataClass.swift */,
 				74A77EF42CE09AD100F4C681 /* Member+CoreDataProperties.swift */,
+				74A77F032CE0BC5700F4C681 /* MemberCoreDataManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		74A77EFC2CE0B4CB00F4C681 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				74A77EFF2CE0B4DF00F4C681 /* Controller */,
+				74A77EFD2CE0B4DF00F4C681 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		74A77EFD2CE0B4DF00F4C681 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74A77EFE2CE0B4DF00F4C681 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74A77EFF2CE0B4DF00F4C681 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74A77F002CE0B4DF00F4C681 /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,12 +219,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A77F012CE0B56400F4C681 /* MainViewController.swift in Sources */,
+				74A77F022CE0B56400F4C681 /* MainView.swift in Sources */,
 				74A77EDD2CE089BF00F4C681 /* LoginViewController.swift in Sources */,
 				74A77EF82CE09C4F00F4C681 /* LoginView.swift in Sources */,
 				74A77ED92CE089BF00F4C681 /* AppDelegate.swift in Sources */,
 				74A77EEE2CE0974A00F4C681 /* MemberCoreData.xcdatamodeld in Sources */,
 				74A77EF52CE09AD100F4C681 /* Member+CoreDataClass.swift in Sources */,
 				74A77EF62CE09AD100F4C681 /* Member+CoreDataProperties.swift in Sources */,
+				74A77F042CE0BC5700F4C681 /* MemberCoreDataManager.swift in Sources */,
 				74A77EDB2CE089BF00F4C681 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
