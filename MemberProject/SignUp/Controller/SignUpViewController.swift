@@ -23,6 +23,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = signUpView
+        self.navigationItem.title = "회원가입"
         buttonEventSet()
     }
     
