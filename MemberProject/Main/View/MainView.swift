@@ -42,7 +42,7 @@ class MainView: UIView {
     
     let loginButton: UIButton = {
         let button = UIButton()
-        button.setTitle("로그인", for: .normal)
+        button.setTitle("시작하기", for: .normal)
         button.backgroundColor = .systemGreen
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 5

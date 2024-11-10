@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
         
         let dataManager = MemberCoreDataManager()
         
-        let member = dataManager.selectMemberNickName(id: id)
+        let member = dataManager.selectMember(id: id)
         
         if let member = member,
            let nickName = member.nickName,
@@ -101,7 +101,8 @@ class MainViewController: UIViewController {
         
         let dataManager = MemberCoreDataManager()
         
-        let member = dataManager.selectMemberNickName(id: id)
+        dataManager.deleteMember(id: id)
+        
         UserDefaults.standard.removeObject(forKey: "loginMemberId")
         memberCheck()
     }
