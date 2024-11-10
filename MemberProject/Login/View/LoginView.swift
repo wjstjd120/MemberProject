@@ -17,7 +17,7 @@ class LoginView: UIView {
         return stackView
     }()
     
-    private let idTextField: UITextField = {
+    let idTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "아이디"
         textField.borderStyle = .roundedRect
@@ -25,7 +25,7 @@ class LoginView: UIView {
         return textField
     }()
     
-    private let passwordTextField: UITextField = {
+    let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "비밀번호"
         textField.borderStyle = .roundedRect

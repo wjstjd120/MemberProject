@@ -29,6 +29,45 @@ class LoginViewController: UIViewController {
     
     private func buttonEventSet() {
         loginView.signUpButton.addTarget(self, action: #selector(signUpPage), for: .touchUpInside)
+        loginView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+    }
+    
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "알림", message: message, preferredStyle: .alert)
+        
+        let doneAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        alert.addAction(doneAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    
+    // objc
+    @objc
+    func login() {
+        guard let id = loginView.idTextField.text,
+              let password = loginView.passwordTextField.text,
+              id != "",
+              password != ""
+        else {
+            showAlert(message: "모든 내용을 입력해 주세요.")
+            return
+        }
+        
+        let dataManager = MemberCoreDataManager()
+        
+        guard let member = dataManager.selectMember(id: id) else {
+            showAlert(message: "존재하지 않는 ID 입니다.")
+            return
+        }
+        
+        if member.password == password {
+            navigationController?.popViewController(animated: true)
+            showAlert(message: "로그인 되었습니다.")
+        } else {
+            showAlert(message: "비밀번호가 일치하지 않습니다.")
+        }
     }
     
     @objc
