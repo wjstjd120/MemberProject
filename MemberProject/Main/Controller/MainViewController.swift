@@ -67,6 +67,16 @@ class MainViewController: UIViewController {
         mainView.memberDeleteButton.addTarget(self, action: #selector(memberDelete), for: .touchUpInside)
     }
     
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "알림", message: message, preferredStyle: .alert)
+        
+        let doneAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        alert.addAction(doneAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     // Objc
     @objc
     func loginPage() {
@@ -84,6 +94,14 @@ class MainViewController: UIViewController {
     
     @objc
     func memberDelete() {
+        guard let id = UserDefaults.standard.string(forKey: "loginMemberId") else {
+            showAlert(message: "회원 정보가 없습니다.")
+            return
+        }
+        
+        let dataManager = MemberCoreDataManager()
+        
+        let member = dataManager.selectMemberNickName(id: id)
         UserDefaults.standard.removeObject(forKey: "loginMemberId")
         memberCheck()
     }
