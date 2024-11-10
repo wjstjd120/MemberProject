@@ -33,9 +33,18 @@ class LoginView: UIView {
         return textField
     }()
     
-    private let startButton: UIButton = {
+    let loginButton: UIButton = {
         let button = UIButton()
-        button.setTitle("시작하기", for: .normal)
+        button.setTitle("로그인", for: .normal)
+        button.backgroundColor = .systemGreen
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = 5
+        return button
+    }()
+    
+    let sginUpButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("회원가입", for: .normal)
         button.backgroundColor = .systemGreen
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 5
@@ -58,7 +67,7 @@ class LoginView: UIView {
         [
          idTextField,
          passwordTextField,
-         startButton
+         loginButton
         ].forEach {
             verticalStackView.addArrangedSubview($0)
         }
