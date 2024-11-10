@@ -20,6 +20,8 @@
 		74A77F012CE0B56400F4C681 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77F002CE0B4DF00F4C681 /* MainViewController.swift */; };
 		74A77F022CE0B56400F4C681 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77EFE2CE0B4DF00F4C681 /* MainView.swift */; };
 		74A77F042CE0BC5700F4C681 /* MemberCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77F032CE0BC5700F4C681 /* MemberCoreDataManager.swift */; };
+		74A77F0A2CE0D2C300F4C681 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77F092CE0D26700F4C681 /* SignUpViewController.swift */; };
+		74A77F0B2CE0D2C300F4C681 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77F072CE0D26700F4C681 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		74A77EFE2CE0B4DF00F4C681 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		74A77F002CE0B4DF00F4C681 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		74A77F032CE0BC5700F4C681 /* MemberCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCoreDataManager.swift; sourceTree = "<group>"; };
+		74A77F072CE0D26700F4C681 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		74A77F092CE0D26700F4C681 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		74A77ED72CE089BF00F4C681 /* MemberProject */ = {
 			isa = PBXGroup;
 			children = (
+				74A77F052CE0D24600F4C681 /* SignUp */,
 				74A77EFC2CE0B4CB00F4C681 /* Main */,
 				74A77ED82CE089BF00F4C681 /* AppDelegate.swift */,
 				74A77EDA2CE089BF00F4C681 /* SceneDelegate.swift */,
@@ -139,6 +144,31 @@
 			isa = PBXGroup;
 			children = (
 				74A77F002CE0B4DF00F4C681 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		74A77F052CE0D24600F4C681 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				74A77F082CE0D26700F4C681 /* Controller */,
+				74A77F062CE0D26700F4C681 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		74A77F062CE0D26700F4C681 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74A77F072CE0D26700F4C681 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74A77F082CE0D26700F4C681 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74A77F092CE0D26700F4C681 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +249,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A77F0A2CE0D2C300F4C681 /* SignUpViewController.swift in Sources */,
+				74A77F0B2CE0D2C300F4C681 /* SignUpView.swift in Sources */,
 				74A77F012CE0B56400F4C681 /* MainViewController.swift in Sources */,
 				74A77F022CE0B56400F4C681 /* MainView.swift in Sources */,
 				74A77EDD2CE089BF00F4C681 /* LoginViewController.swift in Sources */,
