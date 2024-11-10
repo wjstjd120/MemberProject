@@ -13,10 +13,11 @@ class MainView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "로그인 해주세요."
+        label.font = .boldSystemFont(ofSize: 24)
         return label
     }()
     
-    private let verticalStackView: UIStackView = {
+    let verticalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -39,7 +40,7 @@ class MainView: UIView {
         return textField
     }()
     
-    private let loginButton: UIButton = {
+    let loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("로그인", for: .normal)
         button.backgroundColor = .systemGreen
@@ -48,10 +49,28 @@ class MainView: UIView {
         return button
     }()
     
-    private let signUpButton: UIButton = {
+//    private let signUpButton: UIButton = {
+//        let button = UIButton()
+//        button.setTitle("회원가입", for: .normal)
+//        button.backgroundColor = .systemGray
+//        button.layer.masksToBounds = false
+//        button.layer.cornerRadius = 5
+//        return button
+//    }()
+    
+    let logoutButton: UIButton = {
         let button = UIButton()
-        button.setTitle("회원가입", for: .normal)
-        button.backgroundColor = .systemGray
+        button.setTitle("로그아웃", for: .normal)
+        button.backgroundColor = .systemRed
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = 5
+        return button
+    }()
+    
+    let memberDeleteButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("회원탈퇴", for: .normal)
+        button.backgroundColor = .systemGray4
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 5
         return button
@@ -69,17 +88,18 @@ class MainView: UIView {
     
     private func configureUI() {
         [
-         titleLabel,
-         verticalStackView
+         logoutButton,
+         memberDeleteButton
         ].forEach {
-            self.addSubview($0)
+            verticalStackView.addArrangedSubview($0)
         }
         
         [
+         titleLabel,
          loginButton,
-         signUpButton
+         verticalStackView
         ].forEach {
-            verticalStackView.addArrangedSubview($0)
+            self.addSubview($0)
         }
         
 //        verticalStackView.snp.makeConstraints {
@@ -92,6 +112,12 @@ class MainView: UIView {
             $0.top.equalTo(self.safeAreaLayoutGuide)
             $0.left.right.equalTo(self.safeAreaLayoutGuide).inset(15)
             $0.height.equalTo(50)
+        }
+        
+        loginButton.snp.makeConstraints {
+            $0.width.equalTo(200)
+            $0.height.equalTo(50)
+            $0.center.equalToSuperview()
         }
         
         verticalStackView.snp.makeConstraints {
