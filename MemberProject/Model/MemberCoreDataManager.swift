@@ -10,7 +10,7 @@ import UIKit
 class MemberCoreDataManager {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func creatMemberNickName(member: MemberModel) {
+    func createMember(member: MemberModel) {
         let newMember = Member(context: context)
         newMember.id = member.id
         newMember.password = member.password
