@@ -16,6 +16,7 @@
 		74A77EF52CE09AD100F4C681 /* Member+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77EF32CE09AD100F4C681 /* Member+CoreDataClass.swift */; };
 		74A77EF62CE09AD100F4C681 /* Member+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77EF42CE09AD100F4C681 /* Member+CoreDataProperties.swift */; };
 		74A77EF82CE09C4F00F4C681 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A77EF72CE09C4F00F4C681 /* LoginView.swift */; };
+		74A77EFB2CE0A52100F4C681 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 74A77EFA2CE0A52100F4C681 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A77EFB2CE0A52100F4C681 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +126,9 @@
 			dependencies = (
 			);
 			name = MemberProject;
+			packageProductDependencies = (
+				74A77EFA2CE0A52100F4C681 /* SnapKit */,
+			);
 			productName = MemberProject;
 			productReference = 74A77ED52CE089BF00F4C681 /* MemberProject.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 74A77ECC2CE089BF00F4C681;
+			packageReferences = (
+				74A77EF92CE0A52100F4C681 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 74A77ED62CE089BF00F4C681 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -397,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74A77EF92CE0A52100F4C681 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74A77EFA2CE0A52100F4C681 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74A77EF92CE0A52100F4C681 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		74A77EEC2CE0974A00F4C681 /* MemberCoreData.xcdatamodeld */ = {
