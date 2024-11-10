@@ -63,6 +63,7 @@ class LoginViewController: UIViewController {
         }
         
         if member.password == password {
+            UserDefaults.standard.set("\(id)" ,forKey: "loginMemberId")
             navigationController?.popViewController(animated: true)
             showAlert(message: "로그인 되었습니다.")
         } else {
