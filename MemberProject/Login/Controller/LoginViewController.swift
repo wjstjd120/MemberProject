@@ -9,9 +9,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    private var loginView: UIView
+    private var loginView: LoginView
     
-    init(loginView: UIView) {
+    init(loginView: LoginView) {
         self.loginView = loginView
         super.init(nibName: nil, bundle: nil)
     }
@@ -23,6 +23,21 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = loginView
+        self.navigationItem.title = "로그인"
+        buttonEventSet()
     }
+    
+    private func buttonEventSet() {
+        loginView.signUpButton.addTarget(self, action: #selector(signUpPage), for: .touchUpInside)
+    }
+    
+    @objc
+    func signUpPage() {
+        let signUpView = SignUpView()
+        let signUpViewContoroller = SignUpViewController(signUpView: signUpView)
+        
+        navigationController?.pushViewController(signUpViewContoroller, animated: true)
+    }
+
 }
 

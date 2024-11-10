@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  signUpView.swift
 //  MemberProject
 //
 //  Created by 전성진 on 11/10/24.
@@ -8,7 +8,7 @@ import UIKit
 
 import SnapKit
 
-class LoginView: UIView {
+class SignUpView: UIView {
     
     private let verticalStackView: UIStackView = {
         let stackView = UIStackView()
@@ -42,7 +42,7 @@ class LoginView: UIView {
         return button
     }()
     
-    let signUpButton: UIButton = {
+    let sginUpButton: UIButton = {
         let button = UIButton()
         button.setTitle("회원가입", for: .normal)
         button.backgroundColor = .systemGray4
@@ -68,7 +68,7 @@ class LoginView: UIView {
          idTextField,
          passwordTextField,
          loginButton,
-         signUpButton
+         sginUpButton
         ].forEach {
             verticalStackView.addArrangedSubview($0)
         }
